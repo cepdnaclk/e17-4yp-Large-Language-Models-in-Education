@@ -1,0 +1,26 @@
+No,Question,Response
+1,What is virtual memory?,Resp 1
+2,How does virtual memory differ from physical memory?,Resp 2
+3,What is the purpose of virtual memory?,Resp 3
+4,How is virtual memory implemented in modern computer systems?,Resp 4
+5,What are the advantages of using virtual memory?,Resp 5
+6,What are the disadvantages of virtual memory?,Resp 6
+7,How does virtual memory enable multitasking on a computer?,Resp 7
+8,What is the role of the page table in virtual memory management?,Resp 8
+9,How does virtual memory help in managing memory resources efficiently?,Resp 9
+10,What happens when a process exceeds the available physical memory?,Resp 10
+11,What is a page fault?,Resp 11
+12,How is a page fault handled in virtual memory systems?,Resp 12
+13,What are demand-paging and demand-paging systems?,Resp 13
+14,What is the working set of a process in virtual memory?,Resp 14
+15,How does virtual memory support memory protection and isolation between processes?,Resp 15
+16,"What is the concept of ""swapping"" in virtual memory?",Resp 16
+17,How does swapping affect system performance?,Resp 17
+18,What are the differences between swapping and paging?,Resp 18
+19,"What is thrashing, and how does it impact system performance?",Resp 19
+20,How can thrashing be mitigated in virtual memory systems?,Resp 20
+21,What is the difference between a physical address and a virtual address?,Resp 21
+22,What is the purpose of the Translation Lookaside Buffer (TLB)?,Resp 22
+23,How does TLB caching improve virtual memory performance?,Resp 23
+24,What is the impact of TLB misses on system performance?,Resp 24
+25,How does the operating system manage page replacement in virtual memory?,Resp 25
