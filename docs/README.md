@@ -55,8 +55,8 @@ Functionalities of the System
 
 ## Links
 
-- [Project Repository](https://github.com/cepdnaclk/e17-4yp-Large-Language-Models-in-Education/{{ page.repository-name }}){:target="_blank"}
-- [Project Page](https://cepdnaclk.github.io/e17-4yp-Large-Language-Models-in-Education/{{ page.repository-name}}){:target="_blank"}
+- [Project Repository](https://github.com/cepdnaclk/e17-4yp-Large-Language-Models-in-Education/){:target="_blank"}
+- [Project Page](https://cepdnaclk.github.io/e17-4yp-Large-Language-Models-in-Education/){:target="_blank"}
 - [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
 - [University of Peradeniya](https://eng.pdn.ac.lk/)
 
