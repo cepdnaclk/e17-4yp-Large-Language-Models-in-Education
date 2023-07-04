@@ -52,3 +52,15 @@ Functionalities of the System
 - Prof. Roshan G. Ragel, [roshanr@eng.pdn.ac.lk](mailto:roshanr@eng.pdn.ac.lk)
 - Dr. Isuru Nawinne, [isurunawinne@eng.pdn.ac.lk](mailto:isurunawinne@eng.pdn.ac.lk)
 - Dr. Shamane Siriwardhana, [gshasiri@gmail.com](mailto:gshasiri@gmail.com)
+
+## Links
+
+- [Project Repository](https://github.com/cepdnaclk/e17-4yp-Large-Language-Models-in-Education/{{ page.repository-name }}){:target="_blank"}
+- [Project Page](https://cepdnaclk.github.io/e17-4yp-Large-Language-Models-in-Education/{{ page.repository-name}}){:target="_blank"}
+- [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
+- [University of Peradeniya](https://eng.pdn.ac.lk/)
+
+
+[//]: # (Please refer this to learn more about Markdown syntax)
+[//]: # (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
