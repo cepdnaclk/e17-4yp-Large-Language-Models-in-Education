@@ -28,9 +28,6 @@ Functionalities of the System
 ### High Level Architectural Diagram
 ![](https://github.com/cepdnaclk/e17-4yp-Large-Language-Models-in-Education/blob/main/docs/images/diagram.png)
 
-### Cache Handler
-![](https://github.com/cepdnaclk/e17-4yp-Large-Language-Models-in-Education/blob/main/docs/images/cache_handler.png)
-
 ## Team
 
 - E/17/297, Rupasinghe T. T. V. N., [e17297@eng.pdn.ac.lk](mailto:e17297@eng.pdn.ac.lk)
