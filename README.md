@@ -19,7 +19,7 @@ In the last few years, artificial intelligence has advanced significantly, parti
 
 LLMs can be expensive in terms of both time and computer resources, especially when done at scale. There are numerous ways to lower the cost and increase the effectiveness of the cost effective intelligent tutor. Then we are unable to get further readings of our own materials in the platforms. We should be able to get urls for further reading.
 
-## Proposed Framework
+## Solution
 As the solution a cost effective intelligent tutor is implemented as a web application. Our Target domain is Computer Architecture course materials.
 Functionalities of the System
 1. Question Categorizer
@@ -29,7 +29,7 @@ Functionalities of the System
 ![](https://github.com/cepdnaclk/e17-4yp-Large-Language-Models-in-Education/blob/main/docs/images/diagram.png)
 
 ### Cache Handler
-
+![](https://github.com/cepdnaclk/e17-4yp-Large-Language-Models-in-Education/blob/main/docs/images/cache_handler.png)
 
 ## Team
 
