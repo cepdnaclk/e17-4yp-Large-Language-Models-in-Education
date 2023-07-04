@@ -35,10 +35,10 @@ Functionalities of the System
 2. Sentence Similarity Checker
 
 ### High Level Architectural Diagram
-![](https://github.com/cepdnaclk/e17-4yp-Large-Language-Models-in-Education/blob/main/docs/images/diagram.png)
+![diagram](./images/diagram.png)
 
 ### Cache Handler
-![](https://github.com/cepdnaclk/e17-4yp-Large-Language-Models-in-Education/blob/main/docs/images/cache_handler.png)
+![cache_handler](./images/cache_handler.png)
 
 #### Team
 
