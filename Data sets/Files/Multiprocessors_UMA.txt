@@ -1,0 +1,8 @@
+All PEs experience the same average memory access time(independent of PE or accessed memory address)
+•Also known as Symmetric Multi-processors (SMPs)
+
+PEs have to wait for bus to be available when they need to access memory. How to avoid this bottleneck?
+
+Use local caches!
+
+But what happens when a shared data block is fetched into separate local caches?

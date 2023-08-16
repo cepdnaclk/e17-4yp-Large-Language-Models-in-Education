@@ -1,0 +1,11 @@
+Most common method of multi-processor communication
+•Memory sharing managed by shared OS
+•Physical address space shared among PEs
+•Workload balancing among PEs
+•Without shared memory, each PE must have own OS copy in a private memory
+
+Memory
+•Sharing memory →memory contention!
+•Classification (based on CPU’s perspective of memory):
+-Uniform Memory Access (UMA)
+-Non-Uniform Memory Access (NUMA)
