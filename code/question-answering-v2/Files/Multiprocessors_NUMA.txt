@@ -1,0 +1,2 @@
+•Designed for high scalability
+•Memory address space distributed over many devices
