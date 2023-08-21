@@ -1,0 +1,6 @@
+•Communication using messagesvia dedicated channels
+•No memory sharing →PEs have private memories, OS copies
+•Mesh/grid interconnects allow high scalability
+•Programmer has a lot of control & responsibility over inter-processor communication
+•“Porting” traditional programs may be difficult
+•Good for application-specific designs, or large systems running several independent tasks
