@@ -13,8 +13,8 @@ class CacheLFU:
         # Create a list of dictionaries with default values
         data = [{'Question': '', 'Response': '', 'Access Count': 0} for _ in range(self.size)]
         # Create a DataFrame from the list of dictionaries
-        cache_df = pd.DataFrame(data, columns=columns)
+        self.cache_df = pd.DataFrame(data, columns=columns)
         #encode questions
-        embeddings_cache_questions = embedder.encode(cache_df['Question'])
+        self.embeddings_cache = embedder.encode(self.cache_df['Question'])
         print(self.category, "cache initialized")
-        print(len(embeddings_cache_questions))
+        print(len(self.embeddings_cache))   
