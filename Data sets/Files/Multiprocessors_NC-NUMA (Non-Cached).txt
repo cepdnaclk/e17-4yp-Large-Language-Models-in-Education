@@ -1,2 +1,0 @@
-•Fast local accesses, slow remote accesses (400 ~ 500 cycles)
-•Special algorithms to relocate blocksfor memory optimization
