@@ -1,4 +1,0 @@
-•Bus-based coherence control (snooping) is not scalable
-•Directory-based coherence control
-•Directories keep track of “where each block is cached”
-•Typically uses write-through write policy
