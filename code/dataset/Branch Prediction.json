@@ -1,0 +1,587 @@
+[
+    {
+        "context": "Branch prediction is one of the ancient performance improving techniques which still finds relevance into modern architectures. While the simple prediction techniques provide fast lookup and power efficiency they suffer from high misprediction rate. On the other hand, complex branch predictions \u2013 either neural based or variants of two-level branch prediction \u2013 provide better prediction accuracy but consume more power and complexity increases exponentially. In addition to this, in complex prediction techniques the time taken to predict the branches is itself very high \u2013 ranging from 2 to 5 cycles \u2013 which is comparable to the execution time of actual branches. Branch prediction is essentially an optimization (minimization) problem where the emphasis is on to achieve lowest possible miss rate, low power consumption and low complexity with minimum resources. There really are three different kinds of branches: \u00a7 Forward conditional branches - based on a run-time condition, the PC (Program Counter) is changed to point to an address forward in the instruction stream. \u00a7 Backward conditional branches - the PC is changed to point backward in the instruction stream. The branch is based on some condition, such as branching backwards to the beginning of a program loop when a test at the end of the loop states the loop should be executed again. \u00a7 Unconditional branches - this includes jumps, procedure calls and returns that have no specific condition. For example, an unconditional jump instruction might be coded in assembly language as simply \"jmp\", and the instruction stream must immediately be directed to the target location pointed to by the jump instruction, whereas a conditional jump that might be coded as \"jmpne\" would redirect the instruction stream only if the result of a comparison of two values in a previous \"compare\" instructions shows the values to not be equal. (The segmented addressing scheme used by the x86 architecture adds extra complexity, since jumps can be either \"near\" (within a segment) or \"far\" (outside the segment). Each type has different effects on branch prediction algorithms.)",
+        "qas": [
+            {
+                "id": "00001",
+                "is_impossible": false,
+                "question": "What are the three different kinds of branches in branch prediction?",
+                "answers": [
+                    {
+                        "text": "Forward conditional branches, Backward conditional branches, Unconditional branches",
+                        "answer_start": 537
+                    }
+                ]
+            },
+            {
+                "id": "00002",
+                "is_impossible": false,
+                "question": "What is the emphasis in branch prediction optimization?",
+                "answers": [
+                    {
+                        "text": "To achieve the lowest possible miss rate, low power consumption, and low complexity with minimum resources.",
+                        "answer_start": 355
+                    }
+                ]
+            },
+            {
+                "id": "00003",
+                "is_impossible": false,
+                "question": "What is the disadvantage of complex branch prediction techniques?",
+                "answers": [
+                    {
+                        "text": "They consume more power and the complexity increases exponentially.",
+                        "answer_start": 157
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "context": "A Closer Look At Branch Prediction Static Branch Prediction predicts always the same direction for the same branch during the whole program execution. It comprises hardware-fixed prediction and compiler-directed prediction. Simple hardware-fixed direction mechanisms can be: \u2022Predict always not taken \u2022Predict always taken \u2022Backward branch predict taken, forward branch predict not taken Sometimes a bit in the branch opcode allows the compiler to decide the prediction direction. Static Branch Prediction Dynamic Branch Prediction: the hardware influences the prediction while execution proceeds. Prediction is decided on the computation history of the program. During the start-up phase of the program execution, where a static branch prediction might be effective, the history information is gathered and dynamic branch prediction gets effective. In general, dynamic branch prediction gives better results than static branch prediction, but at the cost of increased hardware complexity. Dynamic Branch Prediction",
+        "qas": [
+            {
+                "id": "00004",
+                "is_impossible": false,
+                "question": "What is the difference between static branch prediction and dynamic branch prediction?",
+                "answers": [
+                    {
+                        "text": "Static Branch Prediction predicts a fixed direction for a branch throughout the program execution, while Dynamic Branch Prediction's prediction is influenced by the hardware and computation history of the program.",
+                        "answer_start": 47
+                    }
+                ]
+            },
+            {
+                "id": "00005",
+                "is_impossible": false,
+                "question": "What factors influence the prediction in dynamic branch prediction?",
+                "answers": [
+                    {
+                        "text": "Prediction in dynamic branch prediction is influenced by the computation history of the program.",
+                        "answer_start": 163
+                    }
+                ]
+            },
+            {
+                "id": "00006",
+                "is_impossible": false,
+                "question": "Which type of branch prediction generally gives better results, static or dynamic?",
+                "answers": [
+                    {
+                        "text": "Dynamic branch prediction generally gives better results than static branch prediction.",
+                        "answer_start": 235
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "context": "Dynamic branch prediction schemes are different from static mechanisms because they utilize hardware-based mechanisms that use the run-time behavior of branches to make more accurate predictions than possible using static prediction. Usually, information about outcomes of previous occurrences of branches (branching history) is used to dynamically predict the outcome of the current branch. Some of the proposed dynamic branch prediction mechanisms include: One-level or Bimodal: Uses a Branch History Table (BHT), a table of usually two-bit saturating counters which is indexed by a portion of the branch address (low bits of address). Two-Level Adaptive Branch Prediction. MCFarling\u2019s Two-Level Prediction with index sharing (gshare, 1993). Hybrid or Tournament Predictors: Uses a combinations of two or more (usually two) branch prediction mechanisms. To reduce the stall cycles resulting from correctly predicted taken branches to zero cycles, a Branch Target Buffer (BTB) that includes the addresses of conditional branches that were taken along with their targets is added to the fetch stage. Dynamic Conditional Branch Prediction.",
+        "qas": [
+            {
+                "id": "00007",
+                "is_impossible": false,
+                "question": "How do dynamic branch prediction schemes differ from static mechanisms?",
+                "answers": [
+                    {
+                        "text": "Dynamic branch prediction schemes use hardware-based mechanisms and run-time behavior of branches to make more accurate predictions, while static mechanisms do not utilize run-time behavior for prediction.",
+                        "answer_start": 0
+                    }
+                ]
+            },
+            {
+                "id": "00008",
+                "is_impossible": false,
+                "question": "What information is used in dynamic branch prediction to predict the outcome of the current branch?",
+                "answers": [
+                    {
+                        "text": "Information about outcomes of previous occurrences of branches (branching history) is used to predict the outcome of the current branch in dynamic branch prediction.",
+                        "answer_start": 172
+                    }
+                ]
+            },
+            {
+                "id": "00009",
+                "is_impossible": false,
+                "question": "What is a Branch Target Buffer (BTB) and what purpose does it serve in branch prediction?",
+                "answers": [
+                    {
+                        "text": "A Branch Target Buffer (BTB) includes the addresses of conditional branches that were taken along with their targets, aiming to reduce the stall cycles resulting from correctly predicted taken branches to zero cycles.",
+                        "answer_start": 382
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "context": "How to further reduce the impact of branches on pipeline processor performance Dynamic Branch Prediction: Hardware-based schemes that utilize run-time behavior of branches to make dynamic predictions: Information about outcomes of previous occurrences of branches are used to dynamically predict the outcome of the current branch. Why? Better branch prediction accuracy and thus fewer branch stalls Branch Target Buffer (BTB): A hardware mechanism that aims at reducing the stall cycles resulting from correctly predicted taken branches to zero cycles. To refine our branch prediction, we could create a buffer that is indexed by the low-order address bits of recent branch instructions. In this BHB (sometimes called a \"Branch History Table (BHT)\"), for each branch instruction, we'd store a bit that indicates whether the branch was recently taken. A simple way to implement a dynamic branch predictor would be to check the BHB for every branch instruction. If the BHB's prediction bit indicates the branch should be taken, then the pipeline can go ahead and start fetching instructions from the new address (once it computes the target address). By the time the branch instruction works its way down the pipeline and actually causes a branch, then the correct instructions are already in the pipeline. If the BHB was wrong, a \"misprediction\" occurred, and we'll have to flush out the incorrectly fetched instructions and invert the BHB prediction bit.",
+        "qas": [
+            {
+                "id": "00010",
+                "is_impossible": false,
+                "question": "How does a Branch Target Buffer (BTB) help in reducing stall cycles?",
+                "answers": [
+                    {
+                        "text": "A Branch Target Buffer (BTB) includes the addresses of conditional branches that were taken along with their targets, aiming to reduce the stall cycles resulting from correctly predicted taken branches to zero cycles.",
+                        "answer_start": 70
+                    }
+                ]
+            },
+            {
+                "id": "00011",
+                "is_impossible": false,
+                "question": "How is a dynamic branch predictor implemented using a Branch History Table (BHT)?",
+                "answers": [
+                    {
+                        "text": "A dynamic branch predictor can be implemented by using a Branch History Table (BHT) where, for each branch instruction, a bit is stored indicating whether the branch was recently taken. The predictor checks the BHT for every branch instruction and predicts the branch based on the stored bit.",
+                        "answer_start": 251
+                    }
+                ]
+            },
+            {
+                "id": "00012",
+                "is_impossible": false,
+                "question": "What happens in the pipeline if the prediction from the Branch History Table (BHT) is incorrect?",
+                "answers": [
+                    {
+                        "text": "If the prediction from the Branch History Table (BHT) is incorrect, a misprediction occurs. The incorrectly fetched instructions are flushed out, and the BHT prediction bit is inverted.",
+                        "answer_start": 489
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "context": "It turns out that a single bit in the BHB will be wrong twice for a loop--once on the first pass of the loop and once at the end of the loop. We can get better prediction accuracy by using more bits to create a \"saturating counter\" that is incremented on a taken branch and decremented on an untaken branch. It turns out that a 2-bit predictor does about as well as you could get with more bits, achieving anywhere from 82% to 99% prediction accuracy with a table of 4096 entries. This size of table is at the point of diminishing returns for 2 bit entries, so there isn't much point in storing more. Since we're only indexing by the lower address bits, notice that 2 different branch addresses might have the same low-order bits and could point to the same place in our table--one reason not to let the table get too small. Refining Our BHB by Storing More Bits",
+        "qas": [
+            {
+                "id": "00013",
+                "is_impossible": false,
+                "question": "How can better prediction accuracy be achieved in branch prediction?",
+                "answers": [
+                    {
+                        "text": "Better prediction accuracy in branch prediction can be achieved by using more bits to create a 'saturating counter' that is incremented on a taken branch and decremented on an untaken branch.",
+                        "answer_start": 87
+                    }
+                ]
+            },
+            {
+                "id": "00014",
+                "is_impossible": false,
+                "question": "What is the advantage of using a 2-bit predictor in branch prediction?",
+                "answers": [
+                    {
+                        "text": "A 2-bit predictor achieves high prediction accuracy, ranging from 82% to 99%, with a table of 4096 entries in branch prediction.",
+                        "answer_start": 187
+                    }
+                ]
+            },
+            {
+                "id": "00015",
+                "is_impossible": false,
+                "question": "Why is it important not to let the table in branch prediction get too small?",
+                "answers": [
+                    {
+                        "text": "It's important not to let the table in branch prediction get too small to avoid situations where 2 different branch addresses might have the same low-order bits and could point to the same place in the table.",
+                        "answer_start": 355
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "context": "There is a further refinement we can make to our BHB by correlating the behavior of other branches. Often called a \"Global History Counter\", this \"two-level predictor\" allows the behavior of other branches to also update the predictor bits for a particular branch instruction and achieve slightly better overall prediction accuracy. One implementation is called the \"GShare algorithm\". This approach uses a \"Global Branch History Register\" (a register that stores the global result of recent branches) that gets \"hashed\" with bits from the address of the branch being predicted. The resulting value is used as an index into the BHB where the prediction entry at that location is used to dynamically predict the branch direction. Yes, this is complicated stuff, but it's being used in several modern processors. Two-Level Predictors and the GShare Algorithm",
+        "qas": [
+            {
+                "id": "00016",
+                "is_impossible": false,
+                "question": "What is the 'Global History Counter' in branch prediction?",
+                "answers": [
+                    {
+                        "text": "The 'Global History Counter' is a mechanism in branch prediction that allows the behavior of other branches to update the predictor bits for a particular branch instruction, enhancing overall prediction accuracy.",
+                        "answer_start": 145
+                    }
+                ]
+            },
+            {
+                "id": "00017",
+                "is_impossible": false,
+                "question": "How does the 'GShare algorithm' improve branch prediction accuracy?",
+                "answers": [
+                    {
+                        "text": "The 'GShare algorithm' improves branch prediction accuracy by using a 'Global Branch History Register' that is hashed with bits from the address of the branch being predicted. The resulting value is used as an index into the BHB to dynamically predict the branch direction.",
+                        "answer_start": 324
+                    }
+                ]
+            },
+            {
+                "id": "00018",
+                "is_impossible": false,
+                "question": "What is the purpose of the 'Global Branch History Register' in branch prediction?",
+                "answers": [
+                    {
+                        "text": "The 'Global Branch History Register' stores the global result of recent branches and is used to enhance prediction accuracy in branch prediction.",
+                        "answer_start": 214
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "context": "Combined branch prediction* Scott McFarling proposed combined branch prediction in his 1993 paper 2. Combined branch prediction is about as accurate as local prediction, and almost as fast as global prediction. Combined branch prediction uses three predictors in parallel: bimodal, gshare, and a bimodal-like predictor to pick which of bimodal or gshare to use on a branch-by-branch basis. The choice predictor is yet another 2-bit up\/down saturating counter, in this case the MSB choosing the prediction to use. In this case the counter is updated whenever the bimodal and gshare predictions disagree, to favor whichever predictor was actually right. On the SPEC'89 benchmarks, such a predictor is about as good as the local predictor. Another way of combining branch predictors is to have e.g. 3 different branch predictors, and merge their results by a majority vote. Predictors like gshare use multiple table entries to track the behavior of any particular branch. This multiplication of entries makes it much more likely that two branches will map to the same table entry (a situation called aliasing), which in turn makes it much more likely that prediction accuracy will suffer for those branches. Once you have multiple predictors, it is beneficial to arrange that each predictor will have different aliasing patterns, so that it is more likely that at least one predictor will have no aliasing. Combined predictors with different indexing functions for the different predictors are called gskew predictors, and are analogous to skewed associative caches used for data and instruction caching. * From : http:\/\/en.wikipedia.org\/wiki\/Branch_prediction",
+        "qas": [
+            {
+                "id": "00019",
+                "is_impossible": false,
+                "question": "What is combined branch prediction and how does it improve prediction accuracy?",
+                "answers": [
+                    {
+                        "text": "Combined branch prediction uses three predictors in parallel: bimodal, gshare, and a bimodal-like predictor, enhancing prediction accuracy by selecting the best prediction for each branch based on their combined predictions.",
+                        "answer_start": 71
+                    }
+                ]
+            },
+            {
+                "id": "00020",
+                "is_impossible": false,
+                "question": "How is the choice of prediction made in combined branch prediction?",
+                "answers": [
+                    {
+                        "text": "The choice of prediction in combined branch prediction is made using a 2-bit up\/down saturating counter, with the MSB determining whether to use the bimodal or gshare prediction for a given branch.",
+                        "answer_start": 185
+                    }
+                ]
+            },
+            {
+                "id": "00021",
+                "is_impossible": false,
+                "question": "What is the purpose of using multiple predictors in combined branch prediction?",
+                "answers": [
+                    {
+                        "text": "Using multiple predictors in combined branch prediction helps in enhancing prediction accuracy and mitigating aliasing issues, as each predictor may have different aliasing patterns.",
+                        "answer_start": 385
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "context": "In addition to a large BHB, most predictors also include a buffer that stores the actual target address of taken branches (along with optional prediction bits). This table allows the CPU to look to see if an instruction is a branch and start fetching at the target address early on in the pipeline processing. By storing the instruction address and the target address, even before the processor decodes the instruction, it can know that it is a branch. A large BTB can completely remove most branch penalties (for correctly-predicted branches) if the CPU looks far enough ahead to make sure the target instructions are pre-fetched. Using a Return Address Buffer to predict the return from a subroutine One technique for dealing with the unconditional branch at the end of a subroutine is to create a buffer of the most recent return addresses. There are usually some subroutines that get called quite often in a program, and a return address buffer can make sure that the correct instructions are in the pipeline after the return instruction. Using a Branch Target Buffer (BTB) to Further Reduce the Branch Penalty",
+        "qas": [
+            {
+                "id": "00022",
+                "is_impossible": false,
+                "question": "How does a large BTB help in reducing branch penalties?",
+                "answers": [
+                    {
+                        "text": "A large BTB can completely remove most branch penalties (for correctly-predicted branches) if the CPU looks far enough ahead to make sure the target instructions are pre-fetched.",
+                        "answer_start": 284
+                    }
+                ]
+            },
+            {
+                "id": "00023",
+                "is_impossible": false,
+                "question": "How does a Return Address Buffer aid in predicting returns from subroutines?",
+                "answers": [
+                    {
+                        "text": "A Return Address Buffer aids in predicting returns from subroutines by creating a buffer of the most recent return addresses, ensuring that correct instructions are in the pipeline after the return instruction.",
+                        "answer_start": 407
+                    }
+                ]
+            },
+            {
+                "id": "00024",
+                "is_impossible": false,
+                "question": "What is the purpose of storing the instruction address and the target address in the buffer?",
+                "answers": [
+                    {
+                        "text": "Storing the instruction address and the target address in the buffer allows the CPU to identify branch instructions early in the pipeline processing and start fetching at the target address.",
+                        "answer_start": 169
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "context": "Dynamic Branch Prediction \u2022 Simplest method: (One-Level) \u2013 A branch prediction buffer or Branch History Table (BHT) indexed by low address bits of the branch instruction. \u2013 Each buffer location (or BHT entry) contains one bit indicating whether the branch was recently taken or not \u2022 e.g 0 = not taken , 1 =taken \u2013 Always mispredicts in first and last loop iterations. \u2022 To improve prediction accuracy, two-bit prediction is used: \u2013 A prediction must miss twice before it is changed. \u2022 Thus, a branch involved in a loop will be mispredicted only once when encountered the next time as opposed to twice when one bit is used. \u2013 Two-bit prediction is a specific case of n-bit saturating counter incremented when the branch is taken and decremented when the branch is not taken. \u2013 Two-bit prediction counters are usually always used based on observations that the performance of two-bit BHT prediction is comparable to that of n-bit predictors. The counter (predictor) used is updated after the branch is resolved Smith Algorithm Why 2-bit Prediction? . . . BHT Entry: One Bit 0 = NT = Not Taken 1 = T = Taken N Low Bits of Branch Address One-Level (Bimodal) Branch Predictors \u2022 One-level or bimodal branch prediction uses only one level of branch history. \u2022 These mechanisms usually employ a table which is indexed by lower N bits of the branch address. \u2022 Each table entry (or predictor) consists of n history bits, which form an nbit automaton or saturating counters. \u2022 Smith proposed such a scheme, known as the Smith Algorithm, that uses a table of two-bit saturating counters. (1985) \u2022 One rarely finds the use of more than 3 history bits in the literature. \u2022 Two variations of this mechanism: \u2013 Pattern History Table: Consists of directly mapped entries. \u2013 Branch History Table (BHT): Stores the branch address as a tag. It is associative and enables one to identify the branch instruction during IF by comparing the address of an instruction with the stored branch addresses in the table (similar to BTB).",
+        "qas": [
+            {
+                "id": "00025",
+                "is_impossible": false,
+                "question": "What is the simplest method in dynamic branch prediction?",
+                "answers": [
+                    {
+                        "text": "The simplest method in dynamic branch prediction is the one-level method, which uses a branch prediction buffer or Branch History Table (BHT) indexed by the low address bits of the branch instruction.",
+                        "answer_start": 24
+                    }
+                ]
+            },
+            {
+                "id": "00026",
+                "is_impossible": false,
+                "question": "How is a branch's taken\/not taken history represented in a BHT entry?",
+                "answers": [
+                    {
+                        "text": "In a BHT entry, a branch's taken\/not taken history is represented using one bit, where 0 signifies 'Not Taken' (NT) and 1 signifies 'Taken' (T).",
+                        "answer_start": 178
+                    }
+                ]
+            },
+            {
+                "id": "00027",
+                "is_impossible": false,
+                "question": "Why is two-bit prediction used in branch prediction?",
+                "answers": [
+                    {
+                        "text": "Two-bit prediction is used in branch prediction to improve prediction accuracy. A prediction must miss twice before it is changed, allowing a branch involved in a loop to be mispredicted only once when encountered the next time instead of twice as with one-bit prediction.",
+                        "answer_start": 225
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "context": "One-Level (Bimodal) Branch Predictors \u2022 One-level or bimodal branch prediction uses only one level of branch history. \u2022 These mechanisms usually employ a table which is indexed by lower N bits of the branch address. \u2022 Each table entry (or predictor) consists of n history bits, which form an nbit automaton or saturating counters. \u2022 Smith proposed such a scheme, known as the Smith Algorithm, that uses a table of two-bit saturating counters. (1985) \u2022 One rarely finds the use of more than 3 history bits in the literature. \u2022 Two variations of this mechanism: \u2013 Pattern History Table: Consists of directly mapped entries. \u2013 Branch History Table (BHT): Stores the branch address as a tag. It is associative and enables one to identify the branch instruction during IF by comparing the address of an instruction with the stored branch addresses in the table (similar to BTB).",
+        "qas": [
+            {
+                "id": "00028",
+                "is_impossible": false,
+                "question": "What is the Smith Algorithm in the context of branch prediction?",
+                "answers": [
+                    {
+                        "text": "The Smith Algorithm is a scheme proposed by Smith in 1985 that uses a table of two-bit saturating counters for branch prediction in the one-level (bimodal) branch prediction mechanism.",
+                        "answer_start": 216
+                    }
+                ]
+            },
+            {
+                "id": "00029",
+                "is_impossible": false,
+                "question": "What are the two variations of the one-level branch prediction mechanism?",
+                "answers": [
+                    {
+                        "text": "The two variations of the one-level branch prediction mechanism are the Pattern History Table, consisting of directly mapped entries, and the Branch History Table (BHT), which stores the branch address as a tag.",
+                        "answer_start": 389
+                    }
+                ]
+            },
+            {
+                "id": "00030",
+                "is_impossible": false,
+                "question": "What do the entries in the Pattern History Table (PHT) and Branch History Table (BHT) consist of?",
+                "answers": [
+                    {
+                        "text": "The entries in the Pattern History Table (PHT) and Branch History Table (BHT) consist of n history bits, forming an n-bit automaton or saturating counters.",
+                        "answer_start": 152
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "context": "MCFarling's gshare Predictor \u2022 McFarling noted (1993) that using global history information might be less efficient than simply using the address of the branch instruction, especially for small predictors. \u2022 He suggests using both global history (BHR) and branch address by hashing them together. He proposed using the XOR of global branch history register (BHR) and branch address since he expects that this value has more information than either one of its components. The result is that this mechanism outperforms GAp scheme by a small margin. \u2022 The hardware cost for k history bits is k + 2 x 2k bits, neglecting costs for logic. gshare = global history with index sharing gshare is one one the most widely implemented two level dynamic branch prediction schemes operation gshare Predictor Branch and pattern history are kept globally. History and branch address are XORed and the result is used to index the pattern history table.",
+        "qas": [
+            {
+                "id": "00031",
+                "is_impossible": false,
+                "question": "What does gshare stand for in the context of dynamic branch prediction?",
+                "answers": [
+                    {
+                        "text": "gshare stands for 'global history with index sharing.'",
+                        "answer_start": 339
+                    }
+                ]
+            },
+            {
+                "id": "00032",
+                "is_impossible": false,
+                "question": "How does MCFarling propose to enhance branch prediction efficiency?",
+                "answers": [
+                    {
+                        "text": "MCFarling proposes enhancing branch prediction efficiency by using both global history (BHR) and branch address, hashed together using XOR. This combined value is used to index the pattern history table, aiming to provide more information for prediction.",
+                        "answer_start": 109
+                    }
+                ]
+            },
+            {
+                "id": "00033",
+                "is_impossible": false,
+                "question": "What is the hardware cost for k history bits in gshare Predictor?",
+                "answers": [
+                    {
+                        "text": "The hardware cost for k history bits in gshare Predictor is k + 2 x 2k bits, neglecting costs for logic.",
+                        "answer_start": 226
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "context": "Hybrid predictors are simply combinations of two or more branch prediction mechanisms. \u2022 This approach takes into account that different mechanisms may perform best for different branch scenarios. \u2022 McFarling presented (1993) a number of different combinations of two branch prediction mechanisms. \u2022 He proposed to use an additional 2-bit counter selector array which serves to select the appropriate predictor for each branch. \u2022 One predictor is chosen for the higher two counts, the second one for the lower two counts. \u2022 If the first predictor is wrong and the second one is right the counter is decremented, if the first one is right and the second one is wrong, the counter is incremented. No changes are carried out if both predictors are correct or wrong.",
+        "qas": [
+            {
+                "id": "00034",
+                "is_impossible": false,
+                "question": "What is a hybrid predictor in branch prediction?",
+                "answers": [
+                    {
+                        "text": "A hybrid predictor in branch prediction is a combination of two or more branch prediction mechanisms, considering that different mechanisms may perform optimally for different branch scenarios.",
+                        "answer_start": 0
+                    }
+                ]
+            },
+            {
+                "id": "00035",
+                "is_impossible": false,
+                "question": "How does McFarling propose to improve branch prediction using hybrid predictors?",
+                "answers": [
+                    {
+                        "text": "McFarling proposes to use a 2-bit counter selector array in hybrid predictors to select the appropriate predictor for each branch based on counts. One predictor is chosen for the higher two counts, and the second one is chosen for the lower two counts. If the first predictor is wrong and the second one is right, the counter is decremented; if the first one is right and the second one is wrong, the counter is incremented. No changes are made if both predictors are correct or wrong.",
+                        "answer_start": 168
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "context": "Intel Pentium 1 \u2022 It uses a single-level 2-bit Smith algorithm BHT associated with a four way associative BTB which contains the branch history information. \u2022 The Pentium does not fetch non-predicted targets and does not employ a return address stack (RAS) for subroutine return addresses. \u2022 It does not allow multiple branches to be in flight at the same time. \u2022 Due to the short Pentium pipeline the misprediction penalty is only three or four cycles, depending on what pipeline the branch takes.",
+        "qas": [
+            {
+                "id": "00036",
+                "is_impossible": false,
+                "question": "What branch prediction mechanism does Intel Pentium 1 use?",
+                "answers": [
+                    {
+                        "text": "Intel Pentium 1 uses a single-level 2-bit Smith algorithm BHT associated with a four-way associative BTB that contains the branch history information.",
+                        "answer_start": 37
+                    }
+                ]
+            },
+            {
+                "id": "00037",
+                "is_impossible": false,
+                "question": "What is the misprediction penalty for a branch on Intel Pentium 1?",
+                "answers": [
+                    {
+                        "text": "The misprediction penalty for a branch on Intel Pentium 1 is only three or four cycles, depending on what pipeline the branch takes due to the short Pentium pipeline.",
+                        "answer_start": 219
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "context": "AMD K6 \u2022 Uses a two-level adaptive branch history algorithm implemented in a BHT (gshare) with 8192 entries (16 times the size of the P6). \u2022 However, the size of the BHT prevents AMD from using a BTB or even storing branch target address information in the instruction cache. Instead, the branch target addresses are calculated on-the-fly using ALUs during the decode stage. The adders calculate all possible target addresses before the instruction are fully decoded and the processor chooses which addresses are valid. \u2022 A small branch target cache (BTC) is implemented to avoid a one cycle fetch penalty when a branch is predicted taken. \u2022 The BTC supplies the first 16 bytes of instructions directly to the instruction buffer. \u2022 Like the Cyrix 6x86 the K6 employs a return address stack (RAS) for subroutines. \u2022 The K6 is able to support up to 7 outstanding branches. \u2022 With a prediction accuracy of more than 95% the K6 outperformed all other microprocessors when introduced in 1997 (except the Alpha).",
+        "qas": [
+            {
+                "id": "00038",
+                "is_impossible": false,
+                "question": "What is the size of the BHT in the AMD K6 for branch prediction?",
+                "answers": [
+                    {
+                        "text": "The BHT size in the AMD K6 for branch prediction is 8192 entries, which is 16 times the size of the P6.",
+                        "answer_start": 83
+                    }
+                ]
+            },
+            {
+                "id": "00039",
+                "is_impossible": false,
+                "question": "How does AMD K6 handle branch target addresses since it doesn't use a BTB?",
+                "answers": [
+                    {
+                        "text": "AMD K6 calculates branch target addresses on-the-fly using ALUs during the decode stage, considering all possible target addresses before fully decoding the instructions. The processor then chooses which addresses are valid.",
+                        "answer_start": 211
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "context": "Speculative execution is a technique CPU designers use to improve CPU performance. \u2022 It\u2019s one of three components of out-of-order execution, also known as dynamic execution. \u2022 Along with multiple branch prediction (used to predict the instructions most likely to be needed in the near future) and dataflow analysis (used to align instructions for optimal execution, as opposed to executing them in the order they came in), speculative execution delivered a dramatic performance improvement over previous Intel processors. Because these techniques worked so well, they were quickly adopted by AMD, which used out-of-order processing beginning with the K5. ARM\u2019s focus on low-power mobile processors initially kept it out of the OOoE playing field, but the company adopted out-of-order execution when it built the Cortex A9 and has continued to expand its use of the technique with later, more powerful Cortex-branded CPUs.",
+        "qas": [
+            {
+                "id": "00040",
+                "is_impossible": false,
+                "question": "What is speculative execution and how does it relate to out-of-order execution?",
+                "answers": [
+                    {
+                        "text": "Speculative execution is a technique used to improve CPU performance by predicting and executing instructions before knowing if they will be needed. It is one of the three components of out-of-order execution, which also includes multiple branch prediction and dataflow analysis. Speculative execution, along with these components, dramatically improved CPU performance over previous designs.",
+                        "answer_start": 0
+                    }
+                ]
+            },
+            {
+                "id": "00041",
+                "is_impossible": false,
+                "question": "When did AMD start using out-of-order processing?",
+                "answers": [
+                    {
+                        "text": "AMD began using out-of-order processing with the K5 processor.",
+                        "answer_start": 214
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "context": "Modern CPUs are all pipelined, which means they\u2019re capable of executing multiple instructions in parallel:",
+        "qas": [
+            {
+                "id": "00042",
+                "is_impossible": false,
+                "question": "What is a key characteristic of modern CPUs that enables executing multiple instructions in parallel?",
+                "answers": [
+                    {
+                        "text": "Pipelining is a key characteristic of modern CPUs that allows them to execute multiple instructions in parallel.",
+                        "answer_start": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "context": "Imagine that the green block represents an if-then-else branch. The branch predictor calculates which branch is more likely to be taken, fetches the next set of instructions associated with that branch, and begins speculatively executing them before it knows which of the two code branches it\u2019ll be using.",
+        "qas": [
+            {
+                "id": "00043",
+                "is_impossible": false,
+                "question": "Describe how branch prediction and speculative execution work together.",
+                "answers": [
+                    {
+                        "text": "Branch prediction calculates the likely branch to be taken and fetches associated instructions. Speculative execution starts executing these instructions before determining the actual branch, aiming to improve performance.",
+                        "answer_start": 138
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "context": "Meltdown and Spectre exploit critical vulnerabilities in these modern processors. These hardware vulnerabilities allow programs to steal data which is currently processed on the computer. While programs are typically not permitted to read data from other programs, a malicious program can exploit Meltdown and Spectre to get hold of secrets stored in the memory of other running programs...",
+        "qas": [
+            {
+                "id": "00044",
+                "is_impossible": false,
+                "question": "What do Meltdown and Spectre exploit?",
+                "answers": [
+                    {
+                        "text": "Meltdown and Spectre exploit critical hardware vulnerabilities in modern processors, allowing programs to access data being processed on the computer, potentially stealing sensitive information from other running programs.",
+                        "answer_start": 51
+                    }
+                ]
+            },
+            {
+                "id": "00045",
+                "is_impossible": false,
+                "question": "How do Meltdown and Spectre affect computer security?",
+                "answers": [
+                    {
+                        "text": "Meltdown and Spectre pose significant security threats by allowing malicious programs to access data from other programs that is being processed in the computer's memory. This compromises the security and privacy of sensitive information.",
+                        "answer_start": 0
+                    }
+                ]
+            }
+        ]
+    }
+]
