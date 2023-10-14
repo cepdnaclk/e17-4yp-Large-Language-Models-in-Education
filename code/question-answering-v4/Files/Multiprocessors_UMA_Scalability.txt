@@ -1,0 +1,6 @@
+•Contention on the snoop bus + memory bus
+•Not practical for systems with more than ~32 PEs
+•Alternatives for “bus”
+-Crossbar switch
+-Multi-stage crossbar switch networks
+•Can go up to ~256 PEs

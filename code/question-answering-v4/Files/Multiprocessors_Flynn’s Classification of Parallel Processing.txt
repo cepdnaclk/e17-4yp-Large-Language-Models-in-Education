@@ -1,0 +1,9 @@
+Flynn's Classification of Parallel Processing categorizes architectures based on the nature of instructions and data they process. The classification includes:
+
+SISD (Single Instruction Stream, Single Data Stream): This category represents traditional uniprocessors, where a single instruction is executed on a single piece of data. Examples include both Von Neumann and Harvard architectures.
+
+SIMD (Single Instruction Stream, Multiple Data Streams): In SIMD systems, a single instruction is applied to multiple data elements simultaneously. Vector processors and GPUs exemplify this category, efficiently performing computations on large data sets.
+
+MISD (Multiple Instruction Streams, Single Data Stream): Although mostly a theoretical concept, MISD entails applying multiple instructions to a single data stream. Such architectures remain speculative and are not widely implemented.
+
+MIMD (Multiple Instruction Streams, Multiple Data Streams): MIMD systems process multiple instructions and data streams concurrently. Multi-processor systems and many-core architectures fall under this category, enabling parallel execution of diverse tasks and efficient utilization of resources in complex computing scenarios.

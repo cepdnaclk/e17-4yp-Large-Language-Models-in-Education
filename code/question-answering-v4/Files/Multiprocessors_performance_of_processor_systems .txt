@@ -1,0 +1,5 @@
+Cycle time, CPI and the power wall
+•Instruction level parallelism (ILP)
+-Pipelining & throughput
+-Multiple-issue & thread level parallelism
+•Multi-processors-Moore’s law -Parallel processing elements (PEs) -Multiple concurrent threads of execution in hardware-Communication in multiprocessors
