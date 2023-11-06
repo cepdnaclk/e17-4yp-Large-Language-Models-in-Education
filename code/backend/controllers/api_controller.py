@@ -81,6 +81,10 @@ def api():
         question = request_data.get('question')
         category = request_data.get('category')
         
+        # Currently only Multi Processor context is available
+        if category != "MP":
+          return jsonify({"error": "Invalid category"}), 400
+        
         encoded_question = model.encode(question)
         
         # Check similarity
