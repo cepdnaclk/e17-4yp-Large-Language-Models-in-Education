@@ -6,7 +6,7 @@ from sentence_transformers import SentenceTransformer, util
 from utilities.cache_lfu import CacheLFU
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
-qa_model = pipeline('question-answering')
+qa_model = pipeline(model="twmkn9/bert-base-uncased-squad2")
 
 # Get the current directory of the file
 current_directory = os.path.dirname(os.path.realpath(__file__))
