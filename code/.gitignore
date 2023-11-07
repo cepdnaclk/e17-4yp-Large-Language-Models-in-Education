@@ -1,0 +1,9 @@
+# Ignore Python bytecode files in __pycache__ directories
+**/__pycache__/*.pyc
+
+# Ignore other specific Python bytecode files
+code/backend/__pycache__/app.cpython-38.pyc
+code/backend/controllers/__pycache__/api_controller.cpython-38.pyc
+code/backend/controllers/__pycache__/health_controller.cpython-38.pyc
+code/backend/utilities/__pycache__/__init__.cpython-38.pyc
+code/backend/utilities/__pycache__/cache_lfu.cpython-38.pyc
