@@ -1,0 +1,35 @@
+.chat-box {
+  max-width: 400px;
+  margin: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.user-message {
+  background-color: #79aed5;
+}
+
+.server-message {
+  background-color: #ffa1ee;
+}
+
+.input-box {
+  margin-top: 10px;
+}
+
+input {
+  padding: 5px;
+  width: 70%;
+}
+
+button {
+  padding: 5px;
+  cursor: pointer;
+}
