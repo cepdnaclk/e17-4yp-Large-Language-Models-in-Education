@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Question} from "./models/Question";
+import {Answer} from "./models/Answer";
 
 @Injectable({
   providedIn: 'root'
@@ -21,10 +21,10 @@ export class ChatServiceService {
     //     observe: 'response',
     //   });
 
-    return this.http.post(
-      this.backendBaseUrl + 'process',
-      {data: question},
-      {responseType: 'text'})
+    return this.http.post<Answer>(
+      this.backendBaseUrl + 'api',
+      {question: question, category: "MP"})
+      // {responseType: 'text'})
 
   }
 
