@@ -13,16 +13,21 @@ title:
 
 ## Table of content
 
-1. [Introduction](#introduction)
-2. [Our Problem](#problemstatement)
-3. [Solution](#solution)
+1. [Project Goal](#projectgoal)
+2. [Abstract](#abstract)
+3. [Related Works](#relatedwork)
+4. [Methodology](#methodology)
+5. [Experiment Setup and Implementation](#experimentsetupandimplementation)
+6. [Conclusion](#conclusion)
+7. [Publications](#publications)
+8. [Team](#team)
+9. [Supervisors](#supervisors)
+10. [Links](#links)
 
-## Introduction
+## Project Goal
 In the last few years, artificial intelligence has advanced significantly, particularly in the fields of generative AI and large language models (LLMs). These cutting-edge models have proven to be exceptionally capable of reading, writing, and producing content that is human-like, opening up new horizons in creativity and invention. The rise of generative AI has sparked a lot of curiosity about the possible uses it could have in a variety of industries. These generative AI models provide fascinating prospects in the field of education where technology integration is becoming more common. Intelligent tutoring systems have been sought after in education for a long time to improve and customize students’ learning experiences. The effectiveness of generative AI paired with the current trends in educational technology use offer a potent synergy that has the potential to completely change the educational environment. It offers great potential for involving students, encouraging creativity, and facilitating individualized learning journeys for them as generative AI models may produce tailored content, adaptive learning materials, and interactive simulations. The dawn of a new era in education is on the horizon, driven by the revolutionary potential of generative AI, as we observe the convergence of cutting-edge technology and educational methodology. We explore how LLM might be used in education as the basis for creating a smart tutor that is both affordable and successful.
 
-The "Large Language Models in Education," addresses the challenges associated with utilizing large language models in the educational sector. A major concern identified is the high cost of accessing Large Language Model APIs on educational platforms. As a solution, "Smart Tutor" has been developed. This cost-effective intelligent tutor focuses on reducing expenses while improving the accuracy of prompts. The platform relies on a cache implementation and a question-and-answer model to achieve cost reduction. Additionally, the project involves enhancing Moodle by integrating it with a backend system that utilizes a cache. This system measures the costs of API requests and compares them to the expenses associated with the use of current Large Language Model APIs. This comparative analysis forms the basis of the solution.
-
-## Problem Statement
+The "Large Language Models in Education," addresses the challenges associated with utilizing large language models in the educational sector. A major concern identified is the high cost of accessing Large Language Model APIs on educational platforms. As a solution, "Smart Tutor" has been developed. This cost-effective intelligent tutor focuses on reducing expenses while improving the accuracy of prompts. The platform relies on a cache implementation and a question-and-answer model to achieve cost reduction. Additionally, the project involves enhancing Moodle by integrating it with a backend system that utilizes a cache. This system measures the costs of API requests and compares them to the expenses associated with the use of current Large Language Model APIs. This comparative analysis forms the basis of the solution
 
 ### Problems in LLMs in Education
 - High Cost in LLMs
@@ -40,6 +45,25 @@ Functionalities of the System
 
 ### Cache Handler
 ![cache_handler](./images/cache_handler.png)
+
+## Abstract
+
+## Related Works
+
+## Methodology
+
+## Experiment Setup & Implementation
+
+## Results and Analysis
+
+## Conclusion
+
+## Publications
+
+## Links
+
+## Problem Statement
+
 
 #### Team
 
