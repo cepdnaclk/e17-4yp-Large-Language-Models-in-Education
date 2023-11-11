@@ -75,8 +75,8 @@ def getRelevantPassage(filename):
         return lines
     
 def answerForTheQuestion(question, selectedPassage):
-  print(type(qa_model(question=question, context=selectedPassage)))
-  return qa_model(question=question, context=selectedPassage)
+  resp = qa_model(question=question, context=selectedPassage)
+  return resp['answer']
 
 bp = Blueprint('api', __name__)
 
