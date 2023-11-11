@@ -19,7 +19,7 @@ export class ChatBoxComponent {
       this.chatService.getAnswer(this.newMessage)
         .subscribe((resp)=>{
           console.log(resp.answer);
-          this.messages.push({ content: resp.answer, isUser: false });
+          this.messages.push({ content: resp['answer'], isUser: false });
           // You can implement logic here to handle bot responses or other functionalities.
           this.newMessage = ''; // Clear the input field after sending the message.
 
