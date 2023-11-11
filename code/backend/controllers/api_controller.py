@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import time
 from flask import Blueprint, request, jsonify
 from transformers import pipeline
 from sentence_transformers import SentenceTransformer, util
@@ -27,6 +28,10 @@ request_count = 0
 
 def call_API(request, cache):
   print("* * * * * * * From API * * * * * * * ")
+  
+  # Add delay to simulate API call
+  time.sleep(0.5)
+  
   global request_count 
   request_count += 1
   api_response = "API response - " + str(request_count)
@@ -36,7 +41,7 @@ def call_API(request, cache):
   # Add the new record to the cache
   new_record = {'Question': request, 'Response': api_response, 'Access Count': 0}
   cache.add_record(new_record)
-  return response
+  return api_response
 
 def cache_handler(request, encoded_request, category):
   print("Cache handler called")
@@ -70,6 +75,7 @@ def getRelevantPassage(filename):
         return lines
     
 def answerForTheQuestion(question, selectedPassage):
+  print(type(qa_model(question=question, context=selectedPassage)))
   return qa_model(question=question, context=selectedPassage)
 
 bp = Blueprint('api', __name__)
