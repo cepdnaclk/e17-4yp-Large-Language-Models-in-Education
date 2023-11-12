@@ -28,10 +28,12 @@ In the last few years, artificial intelligence has advanced significantly, parti
 
 The "Large Language Models in Education" addresses many challenges in the educational platforms. Inappropiate responses, privacy concerns, Bias & fairness, high cost, continuous improvement are some of these challenges. A major concern identified is the high cost of accessing Large Language Model APIs. As a solution, "Smart Tutor" has been developed. This cost-effective intelligent tutor focuses on reducing expenses while improving the accuracy of prompts. This prototype relies on a cache implementation with local context and a question-and-answer model to achieve cost reduction. The methodology is implemented for a specific cousre called computer architecture and this prototype can be used for other modules if similar steps are followed. 
 
-## Problem & Soultion
+
+## Problem and Soultion
 - Problem : High Cost of Accessing LLM APIs
 - Solution : Cost Effective Intelligent Tutor
 ![diagram](./images/problem_and_solution.PNG)
+
 
 ## Related Works
 There is a rapidly growing number of large language models (LLMs) that users can query for a fee. We review the cost associated with querying popular LLM APIs like GPT-4, ChatGPT, J1-Jumboand find that these models have heterogeneous pricing structures, with fees that can digger by two orders of magnitude. In particular, using LLMs on large collections of queries and text can be expensive. Motivated by this, we outline and discuss three types of strategies that users can exploit to reduce the inference cost associated with using LLMs.
@@ -60,7 +62,9 @@ Combining approaches within and across different strategies can lead to further 
 
 FrugalGPT is a simple yet exible instantiation of LLM cascade which learns which combinations of LLMs to use for different queries in order to reduce cost and improve accuracy. The experiments show that FrugalGPT can match the performance of the best individual LLM (e.g. GPT-4) with up to 98% cost reduction or improve the accuracy over GPT-4 by 4% with the same cost.
 
-##### Cost Measurement
+
+
+#### Cost Measurement
 Cost of LLM APIs based on
 - Number of input Tokens (unit of text)
 - Number of output Tokens
@@ -75,10 +79,13 @@ Cost of LLM APIs based on
 ##### Overall Performance of a Query & a Response
 ![diagram](./images/overall_performance_of_a_query_and_response.PNG)
 
+
 #### Methods of making an intelligent Tutor
 - Personalize instruction: LLMs can be used to generate personalized feedback for each student, based on their individual needs and learning style.
 - Provide real-time assistance: LLMs can be used to provide real-time assistance to students, as they are working on problems.
 - Generate engaging content: LLMs can be used to generate engaging content, such as interactive simulations and games, that can help students learn more effectively.
+
+
 
 ## Methodology
 #### Step 01. Create High Level Solution Architecture
