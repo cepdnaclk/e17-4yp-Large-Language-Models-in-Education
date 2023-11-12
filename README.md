@@ -18,10 +18,10 @@ The "Large Language Models in Education" addresses many challenges in the educat
 ## Problem & Soultion
 - Problem : High Cost of Accessing LLM APIs
 - Solution : Cost Effective Intelligent Tutor
-![diagram](./images/problem_and_solution.PNG)
+![diagram](./docs/images/problem_and_solution.PNG)
 
 ## High Level Solution Architecture
-![diagram](./images/high_level_architecture_diagram.PNG)
+![diagram](./docs/images/high_level_architecture_diagram.PNG)
 
 ## Methodology
 1. Create High Level Solution Architecture
