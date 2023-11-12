@@ -125,6 +125,11 @@ Cost of LLM APIs based on
 #### Step 08. Frontend Implemenatation
 - Create small chat application using Angular
 
+![diagram](./images/chat_app_1.PNG) ![diagram](./images/chat_app_2.PNG) ![diagram](./images/chat_app_3.PNG) ![diagram](./images/chat_app_4.PNG)
+
+#### Step 09. Integration
+Integrate the Frontend, backend, cache, similarity checker and QA model implementations.
+
 ## Experiments & Results Analysis
 #### Create custom QA models
 - bert → bert-base-cased
@@ -149,7 +154,7 @@ From the results, the QA model which gives the highest accuracy is selected. "be
 ![diagram](./images/cache_ss_2.PNG)
 
 ## Conclusion
-We can conclude that the number of API calls are reduced using cache, especially because most of the time the users are asking the similar questions and because of that there will always be cache hits. From that situation, the number of API calls are reduced.
+The deliverable of the project is a prototype which is capable of integrating with any course materials with a custom based memory (Local Context) instead of a frozen memory. This prototype has the ability of integrating any QA model, checking the accuracy and getting the highest scored answers for prompts. And finally, the number of API calls are reduced using cache, specially, because most of the time the users are asking the similar questions and because of that there will always be cache hits. From that situation, the number of API calls are reduced.
 
 #### Team
 
