@@ -125,10 +125,13 @@ Cost of LLM APIs based on
 #### Step 08. Frontend Implemenatation
 - Create small chat application using Angular
 
-![diagram](./images/chat_app_1.PNG) ![diagram](./images/chat_app_2.PNG) ![diagram](./images/chat_app_3.PNG) ![diagram](./images/chat_app_4.PNG)
+![diagram](./images/chat_app.PNG)
 
 #### Step 09. Integration
 Integrate the Frontend, backend, cache, similarity checker and QA model implementations.
+
+#### Step 09. Testing
+Test the chat application with different prompts.
 
 ## Experiments & Results Analysis
 #### Create custom QA models
