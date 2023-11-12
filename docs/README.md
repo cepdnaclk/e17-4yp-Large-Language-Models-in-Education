@@ -13,8 +13,8 @@ title:
 
 ## Table of content
 
-1. [Project Goal](#projectgoal)
-2. [Abstract](#abstract)
+1. [Introduction](#introduction)
+2. [Problem & Solution](#Problem&Solution)
 3. [Related Works](#relatedwork)
 4. [Methodology](#methodology)
 5. [Experiment Setup and Implementation](#experimentsetupandimplementation)
@@ -24,29 +24,13 @@ title:
 9. [Supervisors](#supervisors)
 10. [Links](#links)
 
-## Project Goal
-In the last few years, artificial intelligence has advanced significantly, particularly in the fields of generative AI and large language models (LLMs). These cutting-edge models have proven to be exceptionally capable of reading, writing, and producing content that is human-like, opening up new horizons in creativity and invention. The rise of generative AI has sparked a lot of curiosity about the possible uses it could have in a variety of industries. These generative AI models provide fascinating prospects in the field of education where technology integration is becoming more common. Intelligent tutoring systems have been sought after in education for a long time to improve and customize students’ learning experiences. The effectiveness of generative AI paired with the current trends in educational technology use offer a potent synergy that has the potential to completely change the educational environment. It offers great potential for involving students, encouraging creativity, and facilitating individualized learning journeys for them as generative AI models may produce tailored content, adaptive learning materials, and interactive simulations. The dawn of a new era in education is on the horizon, driven by the revolutionary potential of generative AI, as we observe the convergence of cutting-edge technology and educational methodology. We explore how LLM might be used in education as the basis for creating a smart tutor that is both affordable and successful.
+## Introduction
+In the last few years, artificial intelligence has advanced significantly, particularly in the fields of generative AI and large language models (LLMs). These cutting-edge models have proven to be exceptionally capable of reading, writing, and producing content that is human-like, opening up new horizons in creativity and invention. These generative AI models provide fascinating prospects in the field of education where technology integration is becoming more common. Intelligent tutoring systems have been sought after in education for a long time to improve and customize students’ learning experiences. The effectiveness of generative AI paired with the current trends in educational technology use offer a potent synergy that has the potential to completely change the educational environment.
 
-The "Large Language Models in Education," addresses the challenges associated with utilizing large language models in the educational sector. A major concern identified is the high cost of accessing Large Language Model APIs on educational platforms. As a solution, "Smart Tutor" has been developed. This cost-effective intelligent tutor focuses on reducing expenses while improving the accuracy of prompts. The platform relies on a cache implementation and a question-and-answer model to achieve cost reduction. Additionally, the project involves enhancing Moodle by integrating it with a backend system that utilizes a cache. This system measures the costs of API requests and compares them to the expenses associated with the use of current Large Language Model APIs. This comparative analysis forms the basis of the solution
+The "Large Language Models in Education," addresses many challenges in the educational platforms. Inappropiate responses, privacy concerns, Bias & fairness, high cost, continuous improvement are some of these challenges. A major concern identified is the high cost of accessing Large Language Model APIs. As a solution, "Smart Tutor" has been developed. This cost-effective intelligent tutor focuses on reducing expenses while improving the accuracy of prompts. This prototype relies on a cache implementation with local contect and a question-and-answer model to achieve cost reduction. The methodology is implemented for a specific cousre called computer architecture and this prototype can be used for other modules if similar steps are followed. 
 
-### Problems in LLMs in Education
-- High Cost in LLMs
-
-LLMs can be expensive in terms of both time and computer resources, especially when done at scale. There are numerous ways to lower the cost and increase the effectiveness of the cost effective intelligent tutor. Then we are unable to get further readings of our own materials in the platforms. We should be able to get urls for further reading.
-
-## Solution
-As the solution a cost effective intelligent tutor is implemented as a web application. Our Target domain is Computer Architecture course materials.
-Functionalities of the System
-1. Question Categorizer
-2. Sentence Similarity Checker
-
-### High Level Architectural Diagram
-![diagram](./images/diagram.png)
-
-### Cache Handler
-![cache_handler](./images/cache_handler.png)
-
-## Abstract
+### Problem & Soultion
+![diagram](./images/problem_and_solution.png)
 
 ## Related Works
 
