@@ -5,7 +5,7 @@ ___
 ## Table of content
 
 1. [Introduction](#introduction)
-2. [Problem & Solution](#problem-&-solution)
+2. [Problem and Solution](#problem-and-solution)
 3. [High Level Solution Architecture](#high-level-solution-architecture)
 4. [Methodology](#methodology)
 5. [Conclusion](#conclusion)

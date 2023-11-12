@@ -14,10 +14,10 @@ title:
 ## Table of content
 
 1. [Introduction](#introduction)
-2. [Problem & Solution](#problem_&_solution)
-3. [Related Works](#related_works)
+2. [Problem and Solution](#problem-and-solution)
+3. [Related Works](#related-works)
 4. [Methodology](#methodology)
-5. [Experiments & Results Analysis](#experiments_&_results_analysis)
+5. [Experiments and Results Analysis](#experiments-and-results-analysis)
 6. [Conclusion](#conclusion)
 8. [Team](#team)
 9. [Supervisors](#supervisors)
