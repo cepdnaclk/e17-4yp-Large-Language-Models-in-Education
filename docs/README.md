@@ -17,9 +17,8 @@ title:
 2. [Problem & Solution](#Problem&Solution)
 3. [Related Works](#relatedwork)
 4. [Methodology](#methodology)
-5. [Experiment Setup and Implementation](#experimentsetupandimplementation)
+5. [Experiments & Results Analysis](#experimentsandresultsanalysis)
 6. [Conclusion](#conclusion)
-7. [Publications](#publications)
 8. [Team](#team)
 9. [Supervisors](#supervisors)
 10. [Links](#links)
@@ -37,33 +36,33 @@ The "Large Language Models in Education" addresses many challenges in the educat
 ## Related Works
 
 ## Methodology
-### Step 01. Create High Level SOlution Architecture
+#### Step 01. Create High Level SOlution Architecture
 ![diagram](./images/high_level_architecture_diagram.PNG)high_level_architecture_diagram
 
-### Step 02. Plan System Data flow
+#### Step 02. Plan System Data flow
 ![diagram](./images/data_flow.PNG)
 
-### Step 03. Collect Course Materials and Create Datasets
-"Computer ARchitecture" course materials are collected and the datasets are created manually. As an example "computer architecture" is selected. This complete protype can be used any other course if the similar steps are followed in the implementation.
+#### Step 03. Collect Course Materials and Create Datasets
+"Computer Architecture" course materials are collected and the datasets are created manually. As an example "computer architecture" is selected. This complete protype can be used any other course if the similar steps are followed in the implementation.
 
-### Step 04. QA Model Implementation
+#### Step 04. QA Model Implementation
 - Get prebuild Question Answering Models
 - Train the models using datasets
 - Use a threshold value(0.5) to check the highest scored answer
 - Get the most suitable QA model using the highest accuracy
 
-### Step 05. Create Similarity Checker
+#### Step 05. Create Similarity Checker
 - Cosine similarity function is used
 - Send the vector to similarity checker
 - Check all the summaries and select the most appropiate passage
 - Send that passage and prompt to QA model
 
-### Step 06. Cache Implementation
+#### Step 06. Cache Implementation
 - LFU (Least Frequently Used) Eviction Policy is used
 - Replace the prompt which is least frequently used
 - Extract vector and and check that vector has an answer already
 
-### Step 07. Backend Implemenatation
+#### Step 07. Backend Implemenatation
 - Get prompt with category
 - all-MiniLM-L6-v2 model is used to encode the prompt to a vector
 - Send the vector to cache
@@ -71,21 +70,34 @@ The "Large Language Models in Education" addresses many challenges in the educat
 - Get the answer from QA model
 - Update cache
 
-### Step 08. Frontend Implemenatation
+#### Step 08. Frontend Implemenatation
 - Create small chat application using Angular
 
-## Experiment Setup & Implementation
+## Experiments & Results Analysis
+#### Create custom QA models
+- bert → bert-base-cased
+- electra-base → google/electra-base-discriminator
+- roberta → roberta-base
+- distilbert → distilbert-base-cased
+- distilroberta → distilroberta-base
+- electra-small → google/electra-small-discriminator
+- xlnet → xlnet-base-cased
 
-## Results and Analysis
+![diagram](./images/custom_models1.png)
+![diagram](./images/custom_models_results.png)
+
+From the results, the QA model which gives the highest accuracy is selected. "bert-base-uncased-squad2" model gives the highest accuracy. So that model was selected to get the answer.
+
+#### Test cache implementation
+- There should be 4 blocks in the cache.
+- After many API calls the access count of the prompt is increased in the cache.
+- Then observe the replacement of the new prompt with the prompt which has the least number of access counts.
+
+![diagram](./images/cache_ss_1.PNG)
+![diagram](./images/cache_ss_2.PNG)
 
 ## Conclusion
-
-## Publications
-
-## Links
-
-## Problem Statement
-
+We can conclude that the number of API calls are reduced using cache, especially because most of the time the users are asking the similar questions and because of that there will always be cache hits. From that situation, the number of API calls are reduced.
 
 #### Team
 
