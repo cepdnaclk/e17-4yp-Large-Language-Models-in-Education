@@ -14,10 +14,10 @@ title:
 ## Table of content
 
 1. [Introduction](#introduction)
-2. [Problem & Solution](#problem-&-solution)
-3. [Related Works](#related-works)
+2. [Problem & Solution](#problem_&_solution)
+3. [Related Works](#related_works)
 4. [Methodology](#methodology)
-5. [Experiments & Results Analysis](#experiments-&-results-analysis)
+5. [Experiments & Results Analysis](#experiments_&_results_analysis)
 6. [Conclusion](#conclusion)
 8. [Team](#team)
 9. [Supervisors](#supervisors)
@@ -28,7 +28,7 @@ In the last few years, artificial intelligence has advanced significantly, parti
 
 The "Large Language Models in Education" addresses many challenges in the educational platforms. Inappropiate responses, privacy concerns, Bias & fairness, high cost, continuous improvement are some of these challenges. A major concern identified is the high cost of accessing Large Language Model APIs. As a solution, "Smart Tutor" has been developed. This cost-effective intelligent tutor focuses on reducing expenses while improving the accuracy of prompts. This prototype relies on a cache implementation with local context and a question-and-answer model to achieve cost reduction. The methodology is implemented for a specific cousre called computer architecture and this prototype can be used for other modules if similar steps are followed. 
 
-### Problem & Soultion
+## Problem & Soultion
 - Problem : High Cost of Accessing LLM APIs
 - Solution : Cost Effective Intelligent Tutor
 ![diagram](./images/problem_and_solution.PNG)
@@ -157,7 +157,7 @@ We can conclude that the number of API calls are reduced using cache, especially
 - Dr. Isuru Nawinne, [isurunawinne@eng.pdn.ac.lk](mailto:isurunawinne@eng.pdn.ac.lk)
 - Dr. Shamane Siriwardhana, [gshasiri@gmail.com](mailto:gshasiri@gmail.com)
 
-## Links
+#### Links
 
 - [Project Repository](https://github.com/cepdnaclk/e17-4yp-Large-Language-Models-in-Education/){:target="_blank"}
 - [Project Page](https://cepdnaclk.github.io/e17-4yp-Large-Language-Models-in-Education/){:target="_blank"}
