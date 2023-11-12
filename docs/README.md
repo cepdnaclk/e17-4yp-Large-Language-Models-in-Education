@@ -14,10 +14,10 @@ title:
 ## Table of content
 
 1. [Introduction](#introduction)
-2. [Problem & Solution](#Problem&Solution)
-3. [Related Works](#relatedwork)
+2. [Problem & Solution](#problem-&-solution)
+3. [Related Works](#related-works)
 4. [Methodology](#methodology)
-5. [Experiments & Results Analysis](#experimentsandresultsanalysis)
+5. [Experiments & Results Analysis](#experiments-&-results-analysis)
 6. [Conclusion](#conclusion)
 8. [Team](#team)
 9. [Supervisors](#supervisors)
@@ -34,10 +34,55 @@ The "Large Language Models in Education" addresses many challenges in the educat
 ![diagram](./images/problem_and_solution.PNG)
 
 ## Related Works
+There is a rapidly growing number of large language models (LLMs) that users can query for a fee. We review the cost associated with querying popular LLM APIs like GPT-4, ChatGPT, J1-Jumboand find that these models have heterogeneous pricing structures, with fees that can digger by two orders of magnitude. In particular, using LLMs on large collections of queries and text can be expensive. Motivated by this, we outline and discuss three types of strategies that users can exploit to reduce the inference cost associated with using LLMs.
+
+#### Cost Reduction Methods
+- Prompt Selection
+![diagram](./images/prompt_selection.PNG)
+
+- Query Concatenation
+![diagram](./images/query_concatenation.PNG)
+
+- Completion Cache
+![diagram](./images/completion_cache.PNG)
+
+- Model fine-tuning
+![diagram](./images/model_fine_tuning.PNG)
+
+- LLM Cascade
+![diagram](./images/LLM_Cascade.PNG)
+
+The cost of an LLM query increases linearly with the size of the prompt. Consequently, a logical approach to reduce the cost of using LLM APIs involves decreasing the prompt's size, a process we refer to as prompt adaptation. Prompt selection is a natural example of prompt adaptation: rather than employing a prompt containing numerous examples that demonstrate how to perform a task, one can retain a small subset of examples in the prompt. This results in a smaller prompt and subsequently lower cost. An additional instantiation is query concatenation. It is important to note that processing queries individually necessitates sending the same prompt to an LLM API multiple times. Therefore, the fundamental concept of query concatenation involves sending the prompt only once to the LLM API while allowing it to address multiple queries, thereby preventing redundant prompt processing. To accomplish this, several queries must be concatenated into a single query, and the prompt must explicitly request the LLM API to process multiple queries. For instance, to handle two queries using one prompt, the examples presented in the prompt can include both queries followed by their corresponding answers.
+
+The concept of LLM approximation is quite simple: if an LLM API is too costly to utilize, one can approximate it using more affordable models or infrastructures. One example is the completion cache, the fundamental idea involves storing the response locally in a cache when submitting a query to an LLM API. To process a new query, we first verify if a similar query has been previously answered. If so, the response is retrieved from the cache. An LLM API is invoked only if no similar query is discovered in the cache. The completion cache provides substantial cost savings when similar queries are frequently posed. For instance, consider a search engine powered by an LLM API. If numerous users search for the same or similar keywords simultaneously, the completion cache facilitates answering all their queries by invoking the LLM only once. Another example of LLM approximation is model fine-tuning. This process consists of three steps: first, collect a powerful but expensive LLM API's responses to a few queries; second, use the responses to fine-tune a smaller and more affordable AI model; and finally, employ the fine-tuned model for new queries. In addition to cost savings, the fine-tuned model often does not require lengthy prompts, thus providing latency improvements as a byproduct. The increasing availability of LLM APIs with heterogeneous performance and costs presents a unique opportunity for data-adaptive LLM selection. Different LLM APIs have their own strengths and weaknesses for various queries. Consequently, appropriately selecting which LLMs to use can provide both cost reduction and performance improvements. LLM cascade is one such example. LLM cascade sends a query to a list of LLM APIs sequentially. If one LLM API's response is reliable, then its response is returned, and no further LLMs in the list are needed. The remaining LLM APIs are queried only if the previous APIs' generations are deemed insuffciently reliable. Query cost is significantly reduced if the first few APIs are relatively inexpensive and produce reliable generations.
+
+Combining approaches within and across different strategies can lead to further cost reduction and performance enhancement. For instance, joint prompt and LLM selection is a composition of prompt selection and LLM cascade: for a given query, it searches for the smallest prompt and most affordable LLM that achieves satisfactory task performance. Another example is to search across both existing LLM APIs and fine-tuned models. It is important to note that the composition of different approaches also increases the computational costs for training. Consequently, this paves the way for investigating trade-offs between query costs, task performance, and computational costs.
+
+FrugalGPT is a simple yet exible instantiation of LLM cascade which learns which combinations of LLMs to use for different queries in order to reduce cost and improve accuracy. The experiments show that FrugalGPT can match the performance of the best individual LLM (e.g. GPT-4) with up to 98% cost reduction or improve the accuracy over GPT-4 by 4% with the same cost.
+
+##### Cost Measurement
+Cost of LLM APIs based on
+- Number of input Tokens (unit of text)
+- Number of output Tokens
+- Fixed cost per Request
+
+##### Summary of commercial LLM APIs
+![diagram](./images/summary_of_commercial_LLM_APIs.png)
+
+##### FrugalGPT Strategy
+![diagram](./images/frugalgpt_strategy.PNG)
+
+##### Overall Performance of a Query & a Response
+![diagram](./images/overall_performance_of_a_query_and_response.PNG)
+
+#### Methods of making an intelligent Tutor
+- Personalize instruction: LLMs can be used to generate personalized feedback for each student, based on their individual needs and learning style.
+- Provide real-time assistance: LLMs can be used to provide real-time assistance to students, as they are working on problems.
+- Generate engaging content: LLMs can be used to generate engaging content, such as interactive simulations and games, that can help students learn more effectively.
 
 ## Methodology
-#### Step 01. Create High Level SOlution Architecture
-![diagram](./images/high_level_architecture_diagram.PNG)high_level_architecture_diagram
+#### Step 01. Create High Level Solution Architecture
+![diagram](./images/high_level_architecture_diagram.PNG)
 
 #### Step 02. Plan System Data flow
 ![diagram](./images/data_flow.PNG)
