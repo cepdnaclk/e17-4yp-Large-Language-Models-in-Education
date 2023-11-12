@@ -32,6 +32,7 @@ The "Large Language Models in Education" addresses many challenges in the educat
 6. Cache Implementation
 7. Backend Implemenatation
 8. Frontend Implemenatation
+9. Integration of Implementations
 
 ## Conclusion
 The deliverable of the project is a prototype which is capable of integrating with any course materials with a custom based memory (Local Context) instead of a frozen memory. This prototype has the ability of integrating any QA model, checking the accuracy and getting the highest scored answers for prompts. And finally, the number of API calls are reduced using cache, specially, because most of the time the users are asking the similar questions and because of that there will always be cache hits. From that situation, the number of API calls are reduced. 
