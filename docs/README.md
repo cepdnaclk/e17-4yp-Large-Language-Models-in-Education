@@ -130,7 +130,7 @@ Cost of LLM APIs based on
 #### Step 09. Integration
 Integrate the Frontend, backend, cache, similarity checker and QA model implementations.
 
-#### Step 09. Testing
+#### Step 10. Testing
 Test the chat application with different prompts.
 
 ## Experiments & Results Analysis
