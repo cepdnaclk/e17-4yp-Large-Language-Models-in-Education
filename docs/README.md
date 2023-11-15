@@ -91,11 +91,16 @@ Cost of LLM APIs based on
 #### Step 03. Collect Course Materials and Create Datasets
 "Computer Architecture" course materials are collected and the datasets are created manually. As an example "computer architecture" is selected. This complete protype can be used any other course if the similar steps are followed in the implementation.
 
+
+
 #### Step 02. Plan System Data flow
 ![diagram](./images/data_flow.PNG)
 
+
+
 #### Step 01. Create High Level Solution Architecture
 ![diagram](./images/high_level_architecture_diagram.PNG)
+
 
 #### Step 04. QA Model Implementation
 - Get prebuild Question Answering Models

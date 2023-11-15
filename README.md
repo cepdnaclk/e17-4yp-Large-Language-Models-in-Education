@@ -35,7 +35,7 @@ The "Large Language Models in Education" addresses many challenges in the educat
 9. Integration of Implementations
 10. Testing
 
-## COst Analysis
+## Cost Analysis
 ![diagram](./docs/images/cost_analysis.PNG)
 
 ## Conclusion
