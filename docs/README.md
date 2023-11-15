@@ -88,7 +88,7 @@ Cost of LLM APIs based on
 
 
 ## Methodology
-#### Step 03. Collect Course Materials and Create Datasets
+#### Step 01. Collect Course Materials and Create Datasets
 "Computer Architecture" course materials are collected and the datasets are created manually. As an example "computer architecture" is selected. This complete protype can be used any other course if the similar steps are followed in the implementation.
 
 
@@ -98,7 +98,7 @@ Cost of LLM APIs based on
 
 
 
-#### Step 01. Create High Level Solution Architecture
+#### Step 03. Create High Level Solution Architecture
 ![diagram](./images/high_level_architecture_diagram.PNG)
 
 
