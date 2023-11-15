@@ -24,9 +24,9 @@ The "Large Language Models in Education" addresses many challenges in the educat
 ![diagram](./docs/images/high_level_architecture_diagram.PNG)
 
 ## Methodology
-1. Create High Level Solution Architecture
+1. Collect Course Materials and Create Datasets
 2. Plan System Data flow
-3. Collect Course Materials and Create Datasets
+3. Create High Level Solution Architecture
 4. QA Model Implementation
 5. Create Similarity Checker
 6. Cache Implementation
@@ -35,8 +35,11 @@ The "Large Language Models in Education" addresses many challenges in the educat
 9. Integration of Implementations
 10. Testing
 
+## COst Analysis
+![diagram](./docs/images/cost_analysis.PNG)
+
 ## Conclusion
-The deliverable of the project is a prototype which is capable of integrating with any course materials with a custom based memory (Local Context) instead of a frozen memory. This prototype has the ability of integrating any QA model, checking the accuracy and getting the highest scored answers for prompts. And finally, the number of API calls are reduced using cache, specially, because most of the time the users are asking the similar questions and because of that there will always be cache hits. From that situation, the number of API calls are reduced. 
+The deliverable of the project is a prototype which is capable of integrating with any course materials with a local context. The number of API calls are reduced using cache, specially, because most of the time the users are asking the similar questions and because of that there will be cache hits. From that situation, the number of API calls are reduced.
 
 ## Team
 
