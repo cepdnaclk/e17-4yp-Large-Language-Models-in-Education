@@ -88,14 +88,14 @@ Cost of LLM APIs based on
 
 
 ## Methodology
-#### Step 01. Create High Level Solution Architecture
-![diagram](./images/high_level_architecture_diagram.PNG)
+#### Step 03. Collect Course Materials and Create Datasets
+"Computer Architecture" course materials are collected and the datasets are created manually. As an example "computer architecture" is selected. This complete protype can be used any other course if the similar steps are followed in the implementation.
 
 #### Step 02. Plan System Data flow
 ![diagram](./images/data_flow.PNG)
 
-#### Step 03. Collect Course Materials and Create Datasets
-"Computer Architecture" course materials are collected and the datasets are created manually. As an example "computer architecture" is selected. This complete protype can be used any other course if the similar steps are followed in the implementation.
+#### Step 01. Create High Level Solution Architecture
+![diagram](./images/high_level_architecture_diagram.PNG)
 
 #### Step 04. QA Model Implementation
 - Get prebuild Question Answering Models
@@ -156,8 +156,15 @@ From the results, the QA model which gives the highest accuracy is selected. "be
 ![diagram](./images/cache_ss_1.PNG)
 ![diagram](./images/cache_ss_2.PNG)
 
+#### Cost Analysis
+For cost analysis, GPT 3,5 LLM API is used. The pricing structure of GPT 3.5 is given below.
+![diagram](./images/gpt3_5.PNG)
+
+From the comparison, it can be concluded that the cost reduction is 70% in our system.
+![diagram](./images/cost_analysis.PNG)
+
 ## Conclusion
-The deliverable of the project is a prototype which is capable of integrating with any course materials with a custom based memory (Local Context) instead of a frozen memory. This prototype has the ability of integrating any QA model, checking the accuracy and getting the highest scored answers for prompts. And finally, the number of API calls are reduced using cache, specially, because most of the time the users are asking the similar questions and because of that there will always be cache hits. From that situation, the number of API calls are reduced.
+The deliverable of the project is a prototype which is capable of integrating with any course materials with a local context. The number of API calls are reduced using cache, specially, because most of the time the users are asking the similar questions and because of that there will be cache hits. From that situation, the number of API calls are reduced.
 
 #### Team
 
