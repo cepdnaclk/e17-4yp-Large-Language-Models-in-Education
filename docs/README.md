@@ -19,6 +19,7 @@ title:
 4. [Methodology](#methodology)
 5. [Experiments and Results Analysis](#experiments-and-results-analysis)
 6. [Conclusion](#conclusion)
+7. [Publications](#publications)
 8. [Team](#team)
 9. [Supervisors](#supervisors)
 10. [Links](#links)
@@ -170,6 +171,12 @@ From the comparison, it can be concluded that the cost reduction is 70% in our s
 
 ## Conclusion
 The deliverable of the project is a prototype which is capable of integrating with any course materials with a local context. The number of API calls are reduced using cache, specially, because most of the time the users are asking the similar questions and because of that there will be cache hits. From that situation, the number of API calls are reduced.
+
+## Publications
+1. [Semester 7 Slides](./files/Semester%207%20slides.pdf){:target="_blank"}
+2. [Semester 7 Report](./files/Semester%207%20report.pdf){:target="_blank"}
+3. [Semester 8 Slides](./files/Semester%208%20slides.pdf){:target="_blank"}
+4. [Semester 8 Report](./files/Semester%208%20report.pdf){:target="_blank"}
 
 #### Team
 
